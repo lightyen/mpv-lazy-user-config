@@ -215,9 +215,7 @@ function Volume:destroy()
 end
 
 function Volume:get_visibility()
---	if state.is_image then return 0 end -- 上游的实现不正确而且没必要
-	return self.slider.pressed and 1 or Elements:maybe('timeline', 'get_is_hovered') and -1
-		or Element.get_visibility(self)
+	return 0
 end
 
 function Volume:update_dimensions()
